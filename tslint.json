@@ -1,0 +1,19 @@
+{
+    "defaultSeverity": "warning",
+    "extends": ["tslint:recommended"],
+    "linterOptions": {
+        "exclude": ["node_modules/**"]
+    },
+    "rules": {
+        "indent": [true, "tabs", 4],
+        "interface-name": true,
+        "no-consecutive-blank-lines": true,
+        "object-literal-sort-keys": false,
+        "ordered-imports": true,
+        "quotemark": [true, "single"],
+        "no-var-requires": true,
+        "only-arrow-functions": true,
+        "no-empty-interface": true,
+        "no-empty": true
+    }
+}
