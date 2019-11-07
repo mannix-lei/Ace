@@ -6,3 +6,10 @@ export interface IUserList {
 	createTime: string;
 	updateTime: string;
 }
+
+export interface IUserModel {
+	name: string;
+	password: string;
+	mobile: string;
+	email: string;
+}

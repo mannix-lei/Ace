@@ -7,6 +7,7 @@
             <el-table-column prop="createTime" label="创建时间"></el-table-column>
             <el-table-column prop="updateTime" label="更新时间"></el-table-column>
         </el-table>
+        <el-button @click="addUser">添加</el-button>
     </div>
 </template>
 <script lang="ts" src="./User.ts"></script>

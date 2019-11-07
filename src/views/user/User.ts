@@ -12,4 +12,7 @@ export default class User extends Vue {
 		const data = await getUserList();
 		this.userList = data;
 	}
+	public addUser() {
+		this.$router.push('/add');
+	}
 }
