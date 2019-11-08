@@ -1,11 +1,16 @@
 import { IUserList, IUserModel } from '@/model/user';
+import { IQuery } from '../model/user';
 import instance from './index';
 
 /**
  * 查询用户列表
  */
-export const getUserList = async () => {
-	const { data } = await instance.get<IUserList[]>('/api/getUserList');
+export const getUserList = async (query: IQuery) => {
+	const { data } = await instance.get<IUserList[]>('/api/getUserList', {
+		params: {
+			...query,
+		},
+	});
 	return data;
 };
 

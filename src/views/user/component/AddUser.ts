@@ -1,5 +1,6 @@
 import { IUserModel } from '@/model/user';
 import { addUser, editUser, getUserInfoById } from '@/service/userService';
+import { validateEmailRequired, validateMobileRequired } from '@/utils/validators';
 import { Form } from 'element-ui';
 import { Component, Vue } from 'vue-property-decorator';
 
@@ -17,8 +18,8 @@ export default class AddUser extends Vue {
 	public userRules = {
 		name: [{ required: true, message: '请填写姓名' }],
 		password: [{ required: true, message: '请填写密码' }],
-		mobile: [{ required: true, message: '请填写联系方式' }],
-		email: [{ required: true, message: '请填写邮箱' }],
+		mobile: [{ required: true, validator: validateMobileRequired }],
+		email: [{ required: true, validator: validateEmailRequired }],
 	};
 
 	public created() {

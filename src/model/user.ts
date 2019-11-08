@@ -13,3 +13,9 @@ export interface IUserModel {
 	mobile: string;
 	email: string;
 }
+
+export interface IQuery {
+	email: string;
+	name: string;
+	mobile: string;
+}
