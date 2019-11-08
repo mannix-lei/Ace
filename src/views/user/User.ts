@@ -1,6 +1,6 @@
 import { IUserList } from '@/model/user';
 import { Component, Vue } from 'vue-property-decorator';
-import { getUserList } from '../../service/userService';
+import { delUser, getUserList } from '../../service/userService';
 
 @Component({})
 export default class User extends Vue {
@@ -14,5 +14,13 @@ export default class User extends Vue {
 	}
 	public addUser() {
 		this.$router.push('/add');
+	}
+	public async delUser(id: number) {
+		await delUser(id);
+		await this.initUserList();
+	}
+
+	public editUser(id: number) {
+		this.$router.push(`/add?id=${id}`);
 	}
 }

@@ -5,7 +5,7 @@
                 <el-input type="text" v-model="userForm.name" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item label="确认密码" prop="password">
-                <el-input type="password" v-model="userForm.password" autocomplete="off"></el-input>
+                <el-input type="text" v-model="userForm.password" autocomplete="off"></el-input>
             </el-form-item>
             <el-form-item label="联系方式" prop="mobile">
                 <el-input v-model="userForm.mobile"></el-input>
