@@ -42,6 +42,18 @@
                 </template>
             </el-table-column>
         </el-table>
+
+        <div class="footer-pagi">
+            <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="query.pageNo"
+                :page-sizes="[5, 10, 20]"
+                :page-size="query.pageSize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="totalRows">
+        </el-pagination>
+        </div>
     </div>
 </template>
 <script lang="ts" src="./User.ts"></script>

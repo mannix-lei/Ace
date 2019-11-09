@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 const Home = () => import(/* webpackChunkName: "Home" */ '../views/home/Home.vue');
 const User = () => import(/* webpackChunkName: "User" */ '../views/user/User.vue');
+const Paper = () => import(/* webpackChunkName: "Paper" */ '../views/pager/Paper.vue');
 const AddUser = () => import(/* webpackChunkName: "User" */ '../views/user/component/AddUser.vue');
 const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
 
@@ -27,6 +28,11 @@ const routes = [
 		path: '/about',
 		name: 'about',
 		component: About,
+	},
+	{
+		path: '/paper',
+		name: 'paper',
+		component: Paper,
 	},
 ];
 

@@ -13,7 +13,11 @@ export default class User extends Vue {
 		email: '',
 		name: '',
 		mobile: '',
+		pageNo: 1,
+		pageSize: 5,
 	};
+
+	public totalRows: number = 0;
 
 	public queryRules: object = {
 		email: [{ validator: validateEmail, trigger: 'change' }],
@@ -25,7 +29,8 @@ export default class User extends Vue {
 	}
 	public async initUserList(query: IQuery) {
 		const data = await getUserList(query);
-		this.userList = data;
+		this.userList = data.list;
+		this.totalRows = data.totalRows;
 	}
 	public addUser() {
 		this.$router.push('/add');
@@ -66,5 +71,15 @@ export default class User extends Vue {
 
 	public resetForm(val: string) {
 		(this.$refs[val] as Form).resetFields();
+	}
+
+	public async handleSizeChange(val: number) {
+		this.query.pageSize = val;
+		await this.initUserList(this.query);
+	}
+
+	public async handleCurrentChange(val: number) {
+		this.query.pageNo = val;
+		await this.initUserList(this.query);
 	}
 }
