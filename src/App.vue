@@ -53,9 +53,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 export default class App extends Vue {
-    public circleUrl: string = "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png";
+    public circleUrl: string =
+        "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png";
     public back() {
         history.go(-1);
     }
