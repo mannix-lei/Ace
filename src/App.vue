@@ -34,12 +34,12 @@
                         <i class="el-icon-back"></i>返回
                     </el-button>
                     <div class="userInfo">
-                        <el-dropdown @command="handleCommand">
+                        <el-dropdown>
                             <span class="el-dropdown-link">
                                 <el-avatar :size="50" :src="circleUrl"></el-avatar>
                             </span>
                             <el-dropdown-menu slot="dropdown">
-                                <el-dropdown-item command="login">登录</el-dropdown-item>
+                                <el-dropdown-item>登录</el-dropdown-item>
                             </el-dropdown-menu>
                         </el-dropdown>
                     </div>
@@ -54,17 +54,10 @@
 
 <script lang="ts">
 import Vue from 'vue';
-let showLogin = false;
 export default class App extends Vue {
     public circleUrl: string = "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png";
-    public showLogin: boolean = false;
     public back() {
         history.go(-1);
-    }
-    public handleCommand(command: string) {
-        if (command === 'login') {
-            showLogin = !showLogin;
-        }
     }
 }
 </script>
