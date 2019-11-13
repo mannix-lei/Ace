@@ -1,7 +1,6 @@
 import Axios from 'axios';
 
 const instance = Axios.create({
-	baseURL: 'http://localhost:3000',
 	timeout: 10000,
 	headers: {
 		'cache-control': 'no-cache',
