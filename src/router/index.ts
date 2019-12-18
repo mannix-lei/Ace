@@ -4,7 +4,7 @@ const Home = () => import(/* webpackChunkName: "Home" */ '../views/home/Home.vue
 const User = () => import(/* webpackChunkName: "User" */ '../views/user/User.vue');
 const Doc = () => import(/* webpackChunkName: "Doc" */ '../views/doc/Doc.vue');
 const AddUser = () => import(/* webpackChunkName: "User" */ '../views/user/component/AddUser.vue');
-const About = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
+const Pages = () => import(/* webpackChunkName: "Pages" */ '../views/pages/Pages.vue');
 
 Vue.use(VueRouter);
 
@@ -25,9 +25,9 @@ const routes = [
 		component: AddUser,
 	},
 	{
-		path: '/about',
-		name: 'about',
-		component: About,
+		path: '/pages',
+		name: 'pages',
+		component: Pages,
 	},
 	{
 		path: '/doc',
