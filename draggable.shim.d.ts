@@ -1,4 +1,4 @@
-declare module 'draggable' {
-    const vuedraggable: any;
-    export = vuedraggable;
+declare module 'vuedraggable' {
+    const draggable: any;
+    export = draggable;
 }

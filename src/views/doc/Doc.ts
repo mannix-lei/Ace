@@ -17,9 +17,9 @@ export default class Doc extends Vue {
 		{ name: 'Juan', id: 5 },
 		{ name: 'Edgard', id: 6 },
 		{ name: 'Johnson', id: 7 },
-    ];
-    
-    public log(evt: any) {
-        window.console.log(evt);
-    }
+	];
+
+	public log(evt: any) {
+		window.console.log(evt);
+	}
 }
